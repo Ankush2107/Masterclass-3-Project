@@ -1,245 +1,228 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Personal Portfolio Website – showcasing projects, skills, and contact information."
-    />
+    <meta name="description"
+        content="Personal Portfolio Website – showcasing projects, skills, and contact information." />
     <title>My Portfolio | Web Developer</title>
 
-    <!-- Phase 2: stylesheet link (empty until Phase 2) -->
-    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <!-- Phase 2: stylesheet -->
+    <link rel="stylesheet" href="style.css" />
 
     <!-- Phase 4: script link (empty until Phase 4) -->
     <!-- <script src="script.js" defer></script> -->
-  </head>
+</head>
 
-  <body>
+<body>
 
     <!-- ============================================================
          NAVIGATION BAR
          ============================================================ -->
     <header>
-      <nav id="main-nav">
-        <div class="nav-brand">
-          <!-- Your name / logo goes here -->
-          <a href="#hero">YourName</a>
-        </div>
+        <nav id="main-nav">
+            <div class="nav-brand">
+                <!-- Your name / logo goes here -->
+                <a href="#hero">YourName</a>
+            </div>
 
-        <ul class="nav-links">
-          <li><a href="#hero">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
 
-        <!-- Phase 4: Dark Mode Toggle Button -->
-        <button id="dark-mode-toggle" type="button">Dark Mode</button>
-      </nav>
+            <!-- Phase 4: Dark Mode Toggle Button -->
+            <button id="dark-mode-toggle" type="button">Dark Mode</button>
+        </nav>
     </header>
 
     <!-- ============================================================
          HERO SECTION
          ============================================================ -->
     <section id="hero">
-      <div class="hero-content">
-        <h1>Hi, I'm <span class="highlight">[Your Name]</span></h1>
-        <p class="hero-tagline">
-          A passionate web developer who turns ideas into elegant,
-          interactive experiences on the web.
-        </p>
-        <a href="#projects" class="cta-button">View My Work</a>
-      </div>
+        <div class="hero-content">
+            <h1>Hi, I'm <span class="highlight">[Your Name]</span></h1>
+            <p class="hero-tagline">
+                A passionate web developer who turns ideas into elegant,
+                interactive experiences on the web.
+            </p>
+            <a href="#projects" class="cta-button">View My Work</a>
+        </div>
     </section>
 
     <!-- ============================================================
          ABOUT SECTION
          ============================================================ -->
     <section id="about">
-      <h2>About Me</h2>
+        <h2>About Me</h2>
 
-      <div class="about-content">
-        <!-- Bio paragraph -->
-        <div class="about-bio">
-          <p>
-            I started my journey in web development because I was fascinated
-            by how websites could bring ideas to life. Over time, I've
-            learned to build responsive, user-friendly sites using modern
-            tools and best practices. I believe great code is both functional
-            and readable.
-          </p>
-          <p>
-            When I'm not coding, you'll find me exploring design inspiration,
-            reading tech articles, or contributing to open-source projects.
-          </p>
-        </div>
+        <div class="about-content">
+            <!-- Bio paragraph -->
+            <div class="about-bio">
+                <p>
+                    I started my journey in web development because I was fascinated
+                    by how websites could bring ideas to life. Over time, I've
+                    learned to build responsive, user-friendly sites using modern
+                    tools and best practices. I believe great code is both functional
+                    and readable.
+                </p>
+                <p>
+                    When I'm not coding, you'll find me exploring design inspiration,
+                    reading tech articles, or contributing to open-source projects.
+                </p>
+            </div>
 
-        <!-- Skills list -->
-        <div class="about-skills">
-          <h3>My Skills</h3>
-          <ul class="skills-list">
-            <li>HTML5 &amp; Semantic Markup</li>
-            <li>CSS3 &amp; Flexbox / Grid</li>
-            <li>JavaScript (ES6+)</li>
-            <li>Responsive Web Design</li>
-            <li>Version Control with Git &amp; GitHub</li>
-            <li>VS Code &amp; Developer Tools</li>
-          </ul>
+            <!-- Skills list -->
+            <div class="about-skills">
+                <h3>My Skills</h3>
+                <ul class="skills-list">
+                    <li>HTML5 &amp; Semantic Markup</li>
+                    <li>CSS3 &amp; Flexbox / Grid</li>
+                    <li>JavaScript (ES6+)</li>
+                    <li>Responsive Web Design</li>
+                    <li>Version Control with Git &amp; GitHub</li>
+                    <li>VS Code &amp; Developer Tools</li>
+                </ul>
+            </div>
         </div>
-      </div>
     </section>
 
     <!-- ============================================================
          PROJECTS SECTION
          ============================================================ -->
     <section id="projects">
-      <h2>My Projects</h2>
-      <p class="section-subtitle">
-        A selection of work I've built during this masterclass and beyond.
-      </p>
+        <h2>My Projects</h2>
+        <p class="section-subtitle">
+            A selection of work I've built during this masterclass and beyond.
+        </p>
 
-      <!--
+        <!--
         Phase 4: This entire gallery will be generated dynamically from
         a JavaScript array. For now, we lay out three placeholder cards.
       -->
-      <div class="projects-gallery" id="projects-gallery">
+        <div class="projects-gallery" id="projects-gallery">
 
-        <!-- Project Card 1 -->
-        <article class="project-card">
-          <div class="project-image-placeholder">
-            <!-- Phase 2: replace with <img> tag -->
-            [Project Screenshot]
-          </div>
-          <div class="project-info">
-            <h3 class="project-title">Project One</h3>
-            <p class="project-description">
-              A brief description of what this project does, what
-              technologies were used, and what problem it solves.
-            </p>
-            <div class="project-links">
-              <a href="#" class="btn-live">Live Demo</a>
-              <a href="#" class="btn-code">View Code</a>
-            </div>
-          </div>
-        </article>
+            <!-- Project Card 1 -->
+            <article class="project-card">
+                <div class="project-image-placeholder">
+                    <!-- Phase 2: replace with <img> tag -->
+                    [Project Screenshot]
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">Project One</h3>
+                    <p class="project-description">
+                        A brief description of what this project does, what
+                        technologies were used, and what problem it solves.
+                    </p>
+                    <div class="project-links">
+                        <a href="#" class="btn-live">Live Demo</a>
+                        <a href="#" class="btn-code">View Code</a>
+                    </div>
+                </div>
+            </article>
 
-        <!-- Project Card 2 -->
-        <article class="project-card">
-          <div class="project-image-placeholder">
-            [Project Screenshot]
-          </div>
-          <div class="project-info">
-            <h3 class="project-title">Project Two</h3>
-            <p class="project-description">
-              A brief description of what this project does, what
-              technologies were used, and what problem it solves.
-            </p>
-            <div class="project-links">
-              <a href="#" class="btn-live">Live Demo</a>
-              <a href="#" class="btn-code">View Code</a>
-            </div>
-          </div>
-        </article>
+            <!-- Project Card 2 -->
+            <article class="project-card">
+                <div class="project-image-placeholder">
+                    [Project Screenshot]
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">Project Two</h3>
+                    <p class="project-description">
+                        A brief description of what this project does, what
+                        technologies were used, and what problem it solves.
+                    </p>
+                    <div class="project-links">
+                        <a href="#" class="btn-live">Live Demo</a>
+                        <a href="#" class="btn-code">View Code</a>
+                    </div>
+                </div>
+            </article>
 
-        <!-- Project Card 3 -->
-        <article class="project-card">
-          <div class="project-image-placeholder">
-            [Project Screenshot]
-          </div>
-          <div class="project-info">
-            <h3 class="project-title">Project Three</h3>
-            <p class="project-description">
-              A brief description of what this project does, what
-              technologies were used, and what problem it solves.
-            </p>
-            <div class="project-links">
-              <a href="#" class="btn-live">Live Demo</a>
-              <a href="#" class="btn-code">View Code</a>
-            </div>
-          </div>
-        </article>
+            <!-- Project Card 3 -->
+            <article class="project-card">
+                <div class="project-image-placeholder">
+                    [Project Screenshot]
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">Project Three</h3>
+                    <p class="project-description">
+                        A brief description of what this project does, what
+                        technologies were used, and what problem it solves.
+                    </p>
+                    <div class="project-links">
+                        <a href="#" class="btn-live">Live Demo</a>
+                        <a href="#" class="btn-code">View Code</a>
+                    </div>
+                </div>
+            </article>
 
-      </div><!-- /.projects-gallery -->
+        </div><!-- /.projects-gallery -->
     </section>
 
     <!-- ============================================================
          CONTACT SECTION
          ============================================================ -->
     <section id="contact">
-      <h2>Get In Touch</h2>
-      <p class="section-subtitle">
-        Have a project in mind or just want to say hi? Fill in the form
-        below and I'll get back to you.
-      </p>
+        <h2>Get In Touch</h2>
+        <p class="section-subtitle">
+            Have a project in mind or just want to say hi? Fill in the form
+            below and I'll get back to you.
+        </p>
 
-      <!--
+        <!--
         Phase 4: JavaScript will handle client-side validation for this form.
         The `novalidate` attribute is added so we can control the UX ourselves.
       -->
-      <form id="contact-form" novalidate>
+        <form id="contact-form" novalidate>
 
-        <!-- Name Field -->
-        <div class="form-group">
-          <label for="name">Full Name</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            placeholder="John Doe"
-            required
-          />
-          <!-- Phase 4: error messages will be injected here by JS -->
-          <span class="error-message" id="name-error"></span>
-        </div>
+            <!-- Name Field -->
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="John Doe" required />
+                <!-- Phase 4: error messages will be injected here by JS -->
+                <span class="error-message" id="name-error"></span>
+            </div>
 
-        <!-- Email Field -->
-        <div class="form-group">
-          <label for="email">Email Address</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="john@example.com"
-            required
-          />
-          <span class="error-message" id="email-error"></span>
-        </div>
+            <!-- Email Field -->
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="john@example.com" required />
+                <span class="error-message" id="email-error"></span>
+            </div>
 
-        <!-- Message Field -->
-        <div class="form-group">
-          <label for="message">Your Message</label>
-          <textarea
-            id="message"
-            name="message"
-            rows="6"
-            placeholder="Tell me about your project..."
-            required
-          ></textarea>
-          <span class="error-message" id="message-error"></span>
-        </div>
+            <!-- Message Field -->
+            <div class="form-group">
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" rows="6" placeholder="Tell me about your project..."
+                    required></textarea>
+                <span class="error-message" id="message-error"></span>
+            </div>
 
-        <button type="submit" id="submit-btn">Send Message</button>
+            <button type="submit" id="submit-btn">Send Message</button>
 
-      </form>
+        </form>
     </section>
 
     <!-- ============================================================
          FOOTER
          ============================================================ -->
     <footer id="main-footer">
-      <p>
-        &copy; 2026 <strong>[Your Name]</strong>. Built with HTML, CSS &amp;
-        JavaScript.
-      </p>
-      <p>
-        <!-- Social / GitHub links -->
-        <a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a>
-        &nbsp;|&nbsp;
-        <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-      </p>
+        <p>
+            &copy; 2026 <strong>[Your Name]</strong>. Built with HTML, CSS &amp;
+            JavaScript.
+        </p>
+        <p>
+            <!-- Social / GitHub links -->
+            <a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a>
+            &nbsp;|&nbsp;
+            <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </p>
     </footer>
 
-  </body>
+</body>
+
 </html>
