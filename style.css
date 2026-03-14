@@ -1,68 +1,24 @@
-/* ============================================================
-   PORTFOLIO WEBSITE – style.css
-   Phase 2: Aesthetic Styling
-   ============================================================ */
-
-/* ------------------------------------------------------------
-   1. Google Fonts Import
-   ------------------------------------------------------------ */
+/* ── Google Fonts ── */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@700;800&display=swap');
 
-/* ------------------------------------------------------------
-   2. CSS Custom Properties (Design Tokens / Color Palette)
-   ------------------------------------------------------------ */
+/* ── Design Tokens ── */
 :root {
-    /* Colors */
-    --color-primary: #1a3a6b;
-    /* Deep Navy Blue */
-    --color-primary-light: #2563eb;
-    /* Bright accent blue */
-    --color-accent: #38bdf8;
-    /* Sky blue highlight */
-    --color-bg: #f8fafc;
-    /* Off-white background */
-    --color-surface: #ffffff;
-    /* Card / nav surface */
-    --color-text: #1e293b;
-    /* Dark slate body text */
-    --color-text-muted: #64748b;
-    /* Muted secondary text */
-    --color-border: #e2e8f0;
-    /* Borders & dividers */
-
-    /* Typography */
-    --font-body: 'Inter', sans-serif;
-    --font-heading: 'Poppins', sans-serif;
-
-    /* Spacing */
-    --space-xs: 0.5rem;
-    /*  8px */
-    --space-sm: 1rem;
-    /* 16px */
-    --space-md: 1.5rem;
-    /* 24px */
-    --space-lg: 3rem;
-    /* 48px */
-    --space-xl: 5rem;
-    /* 80px */
-
-    /* Shadows */
-    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
-    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.10);
-    --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.14);
-
-    /* Transitions */
+    --primary: #1a3a6b;
+    --primary-lt: #2563eb;
+    --accent: #38bdf8;
+    --bg: #f8fafc;
+    --surface: #ffffff;
+    --text: #1e293b;
+    --muted: #64748b;
+    --border: #e2e8f0;
+    --body-font: 'Inter', sans-serif;
+    --head-font: 'Poppins', sans-serif;
     --transition: 0.3s ease;
-
-    /* Border radius */
-    --radius-sm: 6px;
-    --radius-md: 12px;
-    --radius-lg: 20px;
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, .08);
+    --shadow-lg: 0 8px 32px rgba(0, 0, 0, .14);
 }
 
-/* ------------------------------------------------------------
-   3. CSS Reset & Base Styles
-   ------------------------------------------------------------ */
+/* ── Reset ── */
 *,
 *::before,
 *::after {
@@ -73,21 +29,17 @@
 
 html {
     scroll-behavior: smooth;
-    font-size: 16px;
 }
 
 body {
-    font-family: var(--font-body);
-    background-color: var(--color-bg);
-    color: var(--color-text);
+    font-family: var(--body-font);
+    background: var(--bg);
+    color: var(--text);
     line-height: 1.7;
     -webkit-font-smoothing: antialiased;
 }
 
-img {
-    max-width: 100%;
-    display: block;
-}
+
 
 a {
     text-decoration: none;
@@ -98,49 +50,44 @@ ul {
     list-style: none;
 }
 
-/* Reusable container */
+/* ── Section base ── */
 section {
     max-width: 1100px;
     margin: 0 auto;
-    padding: var(--space-xl) var(--space-sm);
+    padding: 5rem 1rem;
 }
 
-/* Section headings */
 section h2 {
-    font-family: var(--font-heading);
+    font-family: var(--head-font);
     font-size: clamp(1.8rem, 4vw, 2.5rem);
-    color: var(--color-primary);
-    margin-bottom: var(--space-sm);
-    position: relative;
+    color: var(--primary);
+    margin-bottom: 1rem;
     display: inline-block;
 }
 
-/* Decorative underline on h2 */
 section h2::after {
     content: '';
     display: block;
     width: 60px;
     height: 4px;
-    background: var(--color-primary-light);
+    background: var(--primary-lt);
     border-radius: 2px;
     margin-top: 6px;
 }
 
 .section-subtitle {
-    color: var(--color-text-muted);
-    margin-bottom: var(--space-lg);
+    color: var(--muted);
+    margin-bottom: 3rem;
     max-width: 600px;
 }
 
-/* ------------------------------------------------------------
-   4. NAVIGATION BAR
-   ------------------------------------------------------------ */
+/* ── Header / Nav ── */
 header {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background: var(--color-surface);
-    border-bottom: 1px solid var(--color-border);
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
     box-shadow: var(--shadow-sm);
 }
 
@@ -150,41 +97,37 @@ header {
     justify-content: space-between;
     max-width: 1100px;
     margin: 0 auto;
-    padding: var(--space-sm) var(--space-sm);
-    gap: var(--space-sm);
+    padding: 1rem;
+    gap: 1rem;
 }
 
-/* Brand / Logo */
 .nav-brand a {
-    font-family: var(--font-heading);
+    font-family: var(--head-font);
     font-size: 1.4rem;
     font-weight: 800;
-    color: var(--color-primary);
-    letter-spacing: -0.5px;
+    color: var(--primary);
     transition: color var(--transition);
 }
 
 .nav-brand a:hover {
-    color: var(--color-primary-light);
+    color: var(--primary-lt);
 }
 
-/* Nav links list */
 .nav-links {
     display: flex;
     align-items: center;
-    gap: var(--space-md);
+    gap: 1.5rem;
 }
 
 .nav-links a {
     font-weight: 600;
-    font-size: 0.95rem;
-    color: var(--color-text);
+    font-size: .95rem;
+    color: var(--text);
     position: relative;
     padding-bottom: 4px;
     transition: color var(--transition);
 }
 
-/* Animated underline on nav links */
 .nav-links a::after {
     content: '';
     position: absolute;
@@ -192,53 +135,47 @@ header {
     left: 0;
     width: 0;
     height: 2px;
-    background: var(--color-primary-light);
+    background: var(--primary-lt);
     border-radius: 2px;
     transition: width var(--transition);
 }
 
 .nav-links a:hover {
-    color: var(--color-primary-light);
+    color: var(--primary-lt);
 }
 
 .nav-links a:hover::after {
     width: 100%;
 }
 
-/* Dark mode toggle */
 #dark-mode-toggle {
-    padding: 0.4rem 1rem;
-    font-size: 0.85rem;
-    font-family: var(--font-body);
+    padding: .4rem 1rem;
+    font-size: .85rem;
+    font-family: var(--body-font);
     font-weight: 600;
-    border: 2px solid var(--color-primary-light);
+    border: 2px solid var(--primary-lt);
     border-radius: 999px;
     background: transparent;
-    color: var(--color-primary-light);
+    color: var(--primary-lt);
     cursor: pointer;
     transition: background var(--transition), color var(--transition);
 }
 
 #dark-mode-toggle:hover {
-    background: var(--color-primary-light);
+    background: var(--primary-lt);
     color: #fff;
 }
 
-/* ------------------------------------------------------------
-   5. HERO SECTION
-   ------------------------------------------------------------ */
+/* ── Hero ── */
 #hero {
     min-height: 88vh;
+    max-width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    max-width: 100%;
-    background: linear-gradient(135deg,
-            var(--color-primary) 0%,
-            #1e4db4 50%,
-            #0f2d6e 100%);
-    padding: var(--space-xl) var(--space-sm);
+    background: linear-gradient(135deg, var(--primary) 0%, #1e4db4 50%, #0f2d6e 100%);
+    padding: 5rem 1rem;
 }
 
 .hero-content {
@@ -246,54 +183,51 @@ header {
 }
 
 #hero h1 {
-    font-family: var(--font-heading);
+    font-family: var(--head-font);
     font-size: clamp(2.2rem, 6vw, 4rem);
-    color: #ffffff;
+    color: #fff;
     line-height: 1.2;
-    margin-bottom: var(--space-sm);
+    margin-bottom: 1rem;
 }
 
 .highlight {
-    color: var(--color-accent);
+    color: var(--accent);
 }
 
 .hero-tagline {
     font-size: clamp(1rem, 2.5vw, 1.25rem);
-    color: rgba(255, 255, 255, 0.80);
-    margin-bottom: var(--space-lg);
+    color: rgba(255, 255, 255, .8);
+    margin: 0 auto 3rem;
     max-width: 560px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
-/* CTA button */
 .cta-button {
     display: inline-block;
-    padding: 0.85rem 2.2rem;
-    background: var(--color-accent);
-    color: var(--color-primary);
+    padding: .85rem 2.2rem;
+    background: var(--accent);
+    color: var(--primary);
     font-weight: 700;
-    font-size: 1rem;
     border-radius: 999px;
-    box-shadow: 0 4px 20px rgba(56, 189, 248, 0.40);
+    box-shadow: 0 4px 20px rgba(56, 189, 248, .4);
     transition: transform var(--transition), box-shadow var(--transition);
 }
 
 .cta-button:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 28px rgba(56, 189, 248, 0.55);
+    box-shadow: 0 8px 28px rgba(56, 189, 248, .55);
 }
 
-/* ------------------------------------------------------------
-   6. ABOUT SECTION
-   ------------------------------------------------------------ */
-#about {
-    background: var(--color-surface);
+/* ── About ── */
+#about,
+#contact {
+    background: var(--surface);
     max-width: 100%;
-    padding: var(--space-xl) var(--space-sm);
+    padding: 5rem 1rem;
 }
 
-#about>* {
+#about>*,
+#contact>*,
+#projects>* {
     max-width: 1100px;
     margin-left: auto;
     margin-right: auto;
@@ -301,12 +235,10 @@ header {
 
 .about-content {
     display: flex;
-    gap: var(--space-lg);
-    align-items: flex-start;
+    gap: 3rem;
     flex-wrap: wrap;
-    max-width: 1100px;
-    margin: 0 auto;
-    margin-top: var(--space-md);
+    align-items: flex-start;
+    margin-top: 1.5rem;
 }
 
 .about-bio {
@@ -314,8 +246,8 @@ header {
 }
 
 .about-bio p {
-    color: var(--color-text-muted);
-    margin-bottom: var(--space-sm);
+    color: var(--muted);
+    margin-bottom: 1rem;
 }
 
 .about-skills {
@@ -323,69 +255,61 @@ header {
 }
 
 .about-skills h3 {
-    font-family: var(--font-heading);
+    font-family: var(--head-font);
     font-size: 1.2rem;
-    color: var(--color-primary);
-    margin-bottom: var(--space-sm);
+    color: var(--primary);
+    margin-bottom: 1rem;
 }
 
 .skills-list {
     display: flex;
     flex-direction: column;
-    gap: 0.6rem;
+    gap: .6rem;
 }
 
 .skills-list li {
     display: flex;
     align-items: center;
-    gap: 0.6rem;
-    font-size: 0.95rem;
-    color: var(--color-text);
+    gap: .6rem;
+    font-size: .95rem;
+    color: var(--text);
 }
 
-/* Bullet dot styling */
 .skills-list li::before {
     content: '';
     width: 10px;
     height: 10px;
     min-width: 10px;
     border-radius: 50%;
-    background: var(--color-primary-light);
+    background: var(--primary-lt);
 }
 
-/* ------------------------------------------------------------
-   7. PROJECTS SECTION
-   ------------------------------------------------------------ */
+/* ── Projects ── */
 #projects {
     max-width: 100%;
-    padding: var(--space-xl) var(--space-sm);
-    background: var(--color-bg);
+    padding: 5rem 1rem;
+    background: var(--bg);
 }
 
-#projects>*:not(.projects-gallery) {
-    max-width: 1100px;
-    margin-left: auto;
-    margin-right: auto;
-}
+
 
 .projects-gallery {
     max-width: 1100px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--space-md);
+    gap: 1.5rem;
 }
 
-/* Project Card */
 .project-card {
-    background: var(--color-surface);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-md);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
     overflow: hidden;
     box-shadow: var(--shadow-sm);
-    transition: transform var(--transition), box-shadow var(--transition);
     display: flex;
     flex-direction: column;
+    transition: transform var(--transition), box-shadow var(--transition);
 }
 
 .project-card:hover {
@@ -393,202 +317,174 @@ header {
     box-shadow: var(--shadow-lg);
 }
 
-/* Image placeholder (Phase 2 only) */
 .project-image-placeholder {
     background: linear-gradient(135deg, #dbeafe, #bfdbfe);
     height: 180px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--color-primary);
+    color: var(--primary);
     font-weight: 600;
-    font-size: 0.85rem;
-    letter-spacing: 0.05em;
+    font-size: .85rem;
 }
 
 .project-info {
-    padding: var(--space-md);
+    padding: 1.5rem;
     display: flex;
     flex-direction: column;
     flex: 1;
 }
 
 .project-title {
-    font-family: var(--font-heading);
+    font-family: var(--head-font);
     font-size: 1.1rem;
-    color: var(--color-primary);
-    margin-bottom: 0.5rem;
+    color: var(--primary);
+    margin-bottom: .5rem;
 }
 
 .project-description {
-    font-size: 0.9rem;
-    color: var(--color-text-muted);
+    font-size: .9rem;
+    color: var(--muted);
     flex: 1;
-    margin-bottom: var(--space-sm);
+    margin-bottom: 1rem;
 }
 
-/* Phase 4 – Tag pills generated by script.js */
 .project-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.4rem;
-    margin-bottom: 0.6rem;
+    gap: .4rem;
+    margin-bottom: .6rem;
 }
 
 .project-tag {
-    display: inline-block;
-    padding: 0.2rem 0.7rem;
-    font-size: 0.75rem;
+    padding: .2rem .7rem;
+    font-size: .75rem;
     font-weight: 600;
     border-radius: 999px;
     background: #dbeafe;
-    color: var(--color-primary);
-    letter-spacing: 0.02em;
-}
-
-body.dark .project-tag {
-    background: #1e3a5f;
-    color: #93c5fd;
+    color: var(--primary);
 }
 
 .project-links {
     display: flex;
-    gap: var(--space-xs);
+    gap: .5rem;
 }
 
 .btn-live,
 .btn-code {
     display: inline-block;
-    padding: 0.45rem 1rem;
-    font-size: 0.85rem;
+    padding: .45rem 1rem;
+    font-size: .85rem;
     font-weight: 600;
     border-radius: 999px;
     transition: background var(--transition), color var(--transition), transform var(--transition);
 }
 
 .btn-live {
-    background: var(--color-primary-light);
+    background: var(--primary-lt);
     color: #fff;
 }
 
 .btn-live:hover {
-    background: var(--color-primary);
+    background: var(--primary);
     transform: translateY(-2px);
 }
 
 .btn-code {
     background: transparent;
-    border: 2px solid var(--color-primary-light);
-    color: var(--color-primary-light);
+    border: 2px solid var(--primary-lt);
+    color: var(--primary-lt);
 }
 
 .btn-code:hover {
-    background: var(--color-primary-light);
+    background: var(--primary-lt);
     color: #fff;
     transform: translateY(-2px);
 }
 
-/* ------------------------------------------------------------
-   8. CONTACT SECTION
-   ------------------------------------------------------------ */
-#contact {
-    max-width: 100%;
-    background: var(--color-surface);
-    padding: var(--space-xl) var(--space-sm);
-}
-
-#contact>* {
-    max-width: 1100px;
-    margin-left: auto;
-    margin-right: auto;
-}
+/* ── Contact ── */
 
 #contact-form {
     max-width: 640px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: var(--space-md);
+    gap: 1.5rem;
 }
 
 .form-group {
     display: flex;
     flex-direction: column;
-    gap: 0.4rem;
+    gap: .4rem;
 }
 
 .form-group label {
     font-weight: 600;
-    font-size: 0.9rem;
-    color: var(--color-text);
+    font-size: .9rem;
 }
 
 .form-group input,
 .form-group textarea {
     width: 100%;
-    padding: 0.8rem 1rem;
-    font-family: var(--font-body);
-    font-size: 0.95rem;
-    color: var(--color-text);
-    background: var(--color-bg);
-    border: 2px solid var(--color-border);
-    border-radius: var(--radius-sm);
-    transition: border-color var(--transition), box-shadow var(--transition);
+    padding: .8rem 1rem;
+    font-family: var(--body-font);
+    font-size: .95rem;
+    color: var(--text);
+    background: var(--bg);
+    border: 2px solid var(--border);
+    border-radius: 6px;
     resize: vertical;
     outline: none;
+    transition: border-color var(--transition), box-shadow var(--transition);
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
-    border-color: var(--color-primary-light);
-    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+    border-color: var(--primary-lt);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, .15);
 }
 
-/* Phase 4 – error messages (hidden by default) */
 .error-message {
-    font-size: 0.82rem;
+    font-size: .82rem;
     color: #dc2626;
     min-height: 1rem;
 }
 
-/* Submit button */
 #submit-btn {
     align-self: flex-start;
-    padding: 0.85rem 2.4rem;
-    background: var(--color-primary);
+    padding: .85rem 2.4rem;
+    background: var(--primary);
     color: #fff;
-    font-family: var(--font-body);
+    font-family: var(--body-font);
     font-size: 1rem;
     font-weight: 700;
     border: none;
     border-radius: 999px;
     cursor: pointer;
-    box-shadow: var(--shadow-md);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, .10);
     transition: background var(--transition), transform var(--transition);
 }
 
 #submit-btn:hover {
-    background: var(--color-primary-light);
+    background: var(--primary-lt);
     transform: translateY(-2px);
 }
 
-/* ------------------------------------------------------------
-   9. FOOTER
-   ------------------------------------------------------------ */
+/* ── Footer ── */
 #main-footer {
-    background: var(--color-primary);
-    color: rgba(255, 255, 255, 0.80);
+    background: var(--primary);
+    color: rgba(255, 255, 255, .8);
     text-align: center;
-    padding: var(--space-md) var(--space-sm);
-    font-size: 0.9rem;
+    padding: 1.5rem 1rem;
+    font-size: .9rem;
 }
 
 #main-footer p {
-    margin-bottom: 0.4rem;
+    margin-bottom: .4rem;
 }
 
 #main-footer a {
-    color: var(--color-accent);
+    color: var(--accent);
     font-weight: 600;
     transition: color var(--transition);
 }
@@ -597,20 +493,9 @@ body.dark .project-tag {
     color: #fff;
 }
 
-/* ============================================================
-   Phase 3: RESPONSIVE DESIGN (Media Queries)
-   Mobile-first breakpoints:
-     ≤ 900px  → Tablet
-     ≤ 600px  → Mobile
-     ≤ 400px  → Very small phones
-   ============================================================ */
-
-/* ------------------------------------------------------------
-   HAMBURGER BUTTON  (hidden on desktop, shown on mobile)
-   ------------------------------------------------------------ */
+/* ── Hamburger ── */
 #hamburger {
     display: none;
-    /* hidden by default */
     flex-direction: column;
     justify-content: center;
     gap: 5px;
@@ -625,12 +510,11 @@ body.dark .project-tag {
     display: block;
     width: 24px;
     height: 3px;
-    background: var(--color-primary);
+    background: var(--primary);
     border-radius: 2px;
     transition: transform var(--transition), opacity var(--transition);
 }
 
-/* Animate hamburger → X when nav is open */
 #hamburger.open span:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
 }
@@ -643,56 +527,44 @@ body.dark .project-tag {
     transform: translateY(-8px) rotate(-45deg);
 }
 
-/* ============================================================
-   BREAKPOINT 1 – TABLET  (≤ 900px)
-   ============================================================ */
+/* ── Responsive: Tablet ≤ 900px ── */
 @media (max-width: 900px) {
-
-    /* Reduce hero height slightly */
     #hero {
         min-height: 75vh;
     }
 
-    /* Stack About columns */
     .about-content {
         flex-direction: column;
-        gap: var(--space-md);
+        gap: 1.5rem;
     }
 
-    /* Shrink project card minimum so 2 fit side-by-side */
     .projects-gallery {
         grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     }
 }
 
-/* ============================================================
-   BREAKPOINT 2 – MOBILE  (≤ 600px)
-   ============================================================ */
+/* ── Responsive: Mobile ≤ 600px ── */
 @media (max-width: 600px) {
-
-    /* ── NAV: show hamburger, hide links by default ── */
     #hamburger {
         display: flex;
     }
 
     .nav-links {
-        /* Slide-down mobile menu */
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
         height: 100vh;
-        background: var(--color-surface);
+        background: var(--surface);
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: var(--space-lg);
+        gap: 3rem;
         transform: translateX(-100%);
-        transition: transform 0.35s ease;
+        transition: transform .35s ease;
         z-index: 999;
     }
 
-    /* When JS adds .open class the menu slides in */
     .nav-links.open {
         transform: translateX(0);
     }
@@ -701,50 +573,42 @@ body.dark .project-tag {
         font-size: 1.3rem;
     }
 
-    /* ── HERO ── */
     #hero {
         min-height: 100vh;
-        padding: var(--space-lg) var(--space-sm);
+        padding: 3rem 1rem;
     }
 
     .cta-button {
-        padding: 0.75rem 1.8rem;
-        font-size: 0.95rem;
+        padding: .75rem 1.8rem;
+        font-size: .95rem;
     }
 
-    /* ── PROJECTS: single column ── */
     .projects-gallery {
         grid-template-columns: 1fr;
     }
 
-    /* ── ABOUT: full-width columns ── */
     .about-bio,
     .about-skills {
         flex: 1 1 100%;
     }
 
-    /* ── FORM: full-width submit button ── */
     #submit-btn {
         width: 100%;
         text-align: center;
     }
 
-    /* ── SECTION SPACING ── */
     section,
     #hero,
     #about,
     #contact,
     #projects {
-        padding-top: var(--space-lg);
-        padding-bottom: var(--space-lg);
+        padding-top: 3rem;
+        padding-bottom: 3rem;
     }
 }
 
-/* ============================================================
-   BREAKPOINT 3 – VERY SMALL PHONES  (≤ 400px)
-   ============================================================ */
+/* ── Responsive: Very Small ≤ 400px ── */
 @media (max-width: 400px) {
-
     .nav-brand a {
         font-size: 1.1rem;
     }
@@ -760,34 +624,33 @@ body.dark .project-tag {
     }
 }
 
-/* ============================================================
-   Phase 4: Dark Mode CSS overrides will be added below.
-   ============================================================ */
-
-/* Dark mode colour overrides (triggered by JS adding .dark to <body>) */
+/* ── Dark Mode ── */
 body.dark {
-    --color-bg: #0f172a;
-    --color-surface: #1e293b;
-    --color-text: #e2e8f0;
-    --color-text-muted: #94a3b8;
-    --color-border: #334155;
+    --bg: #0f172a;
+    --surface: #1e293b;
+    --text: #e2e8f0;
+    --muted: #94a3b8;
+    --border: #334155;
 }
 
-body.dark header {
-    background: #1e293b;
-}
+
 
 body.dark .project-image-placeholder {
     background: linear-gradient(135deg, #1e3a5f, #1e4475);
     color: #93c5fd;
 }
 
+body.dark .project-tag {
+    background: #1e3a5f;
+    color: #93c5fd;
+}
+
 body.dark #dark-mode-toggle {
-    border-color: var(--color-accent);
-    color: var(--color-accent);
+    border-color: var(--accent);
+    color: var(--accent);
 }
 
 body.dark #dark-mode-toggle:hover {
-    background: var(--color-accent);
+    background: var(--accent);
     color: #0f172a;
 }
